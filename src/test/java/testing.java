@@ -33,10 +33,10 @@ public class testing {
 
 		WebElement listofele=driver.findElement(By.xpath("//*[@id=\"inventory_container\"]/div"));
 		System.out.println(listofele);
-		//Thread.sleep(10000);
+		Thread.sleep(10000);
 		driver.navigate().to("https://duckduckgo.com/");
 		System.out.println(driver.findElement(By.id("searchbox_homepage")).getTagName());
-		driver.navigate().to("https://www.sugarcrm.com/");
+		driver.navigate().to("https://www.sugarcrm.com/request-demo/");
 		
 		driver.findElement(By.className("btn btn-primary btn-lg mr-4")).click();
 		WebElement drop=driver.findElement(By.id("how-select"));
