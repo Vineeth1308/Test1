@@ -16,10 +16,12 @@ public class testing {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		if(browser.equals("Chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver=new ChromeDriver();
 			}
 		if(browser.equals("Edge")) {
 			driver=new EdgeDriver();
+			WebDriverManager.edgedriver().setup();
 			}
 		
 		//WebDriverManager.chromedriver().setup();
@@ -38,7 +40,7 @@ public class testing {
 		System.out.println(driver.findElement(By.id("searchbox_homepage")).getTagName());
 		driver.navigate().to("https://www.sugarcrm.com/request-demo/");
 		
-		driver.findElement(By.className("btn btn-primary btn-lg mr-4")).click();
+		//driver.findElement(By.className("btn btn-primary btn-lg mr-4")).click();
 		WebElement drop=driver.findElement(By.id("how-select"));
 		Select selected=new Select(drop);
 		selected.selectByIndex(3);
